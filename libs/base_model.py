@@ -4,15 +4,22 @@ from typing import List, Type, TypeVar
 from peewee import AutoField, Model, SqliteDatabase
 from typeguard import typechecked
 
+# defines a generic type variable T that must be a subclass of BaseModel.
+# This allows you to use type hints for methods that work with any subclass of BaseModel,
+# improving type safety and code clarity.
 T = TypeVar("T", bound="BaseModel")
 
 
 @typechecked
 class BaseModel(Model):
+    """Base model for all database models."""
+
     id = AutoField(primary_key=True)
     log = logging.getLogger(__name__)
 
     class Meta:
+        """Meta class for BaseModel."""
+
         database = SqliteDatabase(
             "..\\output\\database.sqlite",
             pragmas={
@@ -24,6 +31,7 @@ class BaseModel(Model):
 
     @classmethod
     def create_database(cls) -> None:
+        """Create the database and tables for all subclasses of BaseModel."""
         models = cls.__subclasses__()
         cls.log.debug(f"Creating database with models: {[m.__name__ for m in models]}")
         db = cls._meta.database
@@ -32,6 +40,7 @@ class BaseModel(Model):
 
     @classmethod
     def find_all(cls: Type[T]) -> List[T]:
+        """Find all instances of the model."""
         cls.log.debug(f"Finding all instances of {cls.__name__} ..")
         instances = list(cls.select())
         cls.log.debug(f".. found {len(instances)} instances of {cls.__name__}.")
@@ -39,6 +48,12 @@ class BaseModel(Model):
 
     @classmethod
     def save_all(cls: Type[T], instances: List[T]) -> None:
+        """
+        Save all instances of the model to the database.
+
+        :param instances:
+        :return:
+        """
         cls.log.debug(f"Saving {len(instances)} instances of {cls.__name__} ..")
         db = cls._meta.database
         with db.atomic():
