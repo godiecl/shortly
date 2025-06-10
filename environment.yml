@@ -6,12 +6,11 @@ dependencies:
   - python=3.12.10
   - pip=25.1.1
   - pip:
-      - coloredlogs==15.0.1
-      - humanize==4.12.3
-      - peewee==3.18.1
-      - pydocstyle==6.3.0
-      - python-dotenv==1.1.0
-      - ruff==0.11.13
-      - tqdm==4.67.1
-      - typeguard==4.4.3
-      - vulture==2.14
+      - coloredlogs==15.0.1   # Logging library
+      - humanize==4.12.3      # Humanize library for better readability
+      - peewee==3.18.1        # ORM for SQLite
+      - python-dotenv==1.1.0  # Environment variable management
+      - ruff==0.11.13         # Linter for Python code
+      - tqdm==4.67.1          # Progress bar library
+      - typeguard==4.4.3      # Runtime type checking
+      - vulture==2.14         # Code analysis tool
