@@ -19,7 +19,7 @@ class Link(BaseModel):
 
 @typechecked
 def main():
-    log.debug("Starting main()")
+    log.info("Starting main()")
 
     log.debug("Creating the database...")
     BaseModel.create_database()
@@ -30,7 +30,7 @@ def main():
             f"Link: {link.url}, Short URL: {link.short_url}, Clicks: {link.clicks}"
         )
 
-    log.debug("Done.")
+    log.info("Done.")
 
 
 if __name__ == "__main__":
