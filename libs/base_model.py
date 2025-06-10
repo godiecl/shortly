@@ -1,3 +1,4 @@
+import logging
 from typing import List, Type, TypeVar
 
 from peewee import AutoField, Model, SqliteDatabase
@@ -9,6 +10,7 @@ T = TypeVar("T", bound="BaseModel")
 @typechecked
 class BaseModel(Model):
     id = AutoField(primary_key=True)
+    log = logging.getLogger(__name__)
 
     class Meta:
         database = SqliteDatabase(
@@ -23,16 +25,21 @@ class BaseModel(Model):
     @classmethod
     def create_database(cls) -> None:
         models = cls.__subclasses__()
+        cls.log.debug(f"Creating database with models: {[m.__name__ for m in models]}")
         db = cls._meta.database
         with db:
             db.create_tables(models, safe=True)
 
     @classmethod
     def find_all(cls: Type[T]) -> List[T]:
-        return list(cls.select())
+        cls.log.debug(f"Finding all instances of {cls.__name__} ..")
+        instances = list(cls.select())
+        cls.log.debug(f".. found {len(instances)} instances of {cls.__name__}.")
+        return instances
 
     @classmethod
     def save_all(cls: Type[T], instances: List[T]) -> None:
+        cls.log.debug(f"Saving {len(instances)} instances of {cls.__name__} ..")
         db = cls._meta.database
         with db.atomic():
             to_insert = []
@@ -43,6 +50,10 @@ class BaseModel(Model):
                     to_insert.append(instance)
                 else:
                     to_update.append(instance)
+
+            cls.log.debug(
+                f"Prepared {len(to_insert)} instances for insertion and {len(to_update)} instances for update."
+            )
 
             if to_insert:
                 cls.bulk_create(instances)
