@@ -1,10 +1,10 @@
 import logging
-from peewee import TextField, IntegerField
-from typeguard import typechecked
 
 from base_model import BaseModel
 from benchmark import benchmark
 from logger import configure_logging
+from peewee import IntegerField, TextField
+from typeguard import typechecked
 
 
 @typechecked
@@ -26,9 +26,12 @@ def main():
 
     links = Link.find_all()
     for link in links:
-        log.debug(f"Link: {link.url}, Short URL: {link.short_url}, Clicks: {link.clicks}")
+        log.debug(
+            f"Link: {link.url}, Short URL: {link.short_url}, Clicks: {link.clicks}"
+        )
 
     log.debug("Done.")
+
 
 if __name__ == "__main__":
     # the logger

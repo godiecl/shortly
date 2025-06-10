@@ -1,6 +1,9 @@
 name: shortly
+channels:
+  - conda-forge
+  - defaults
 dependencies:
-  - python=3.12.11
+  - python=3.12.10
   - pip=25.1.1
   - pip:
       - coloredlogs==15.0.1

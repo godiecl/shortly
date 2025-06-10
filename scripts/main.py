@@ -1,16 +1,17 @@
 import logging
 
+from benchmark import benchmark
 from dotenv import load_dotenv
+from logger import configure_logging
 from typeguard import typechecked
 
-from benchmark import benchmark
-from logger import configure_logging
 
 @typechecked
 def main():
     log.debug("Starting main()")
 
     log.debug("Done.")
+
 
 if __name__ == "__main__":
     # the logger
