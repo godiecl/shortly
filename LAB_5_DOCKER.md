@@ -1,4 +1,4 @@
-# LAB 5: Containerization with Docker
+# Laboratory 5: Containerization with Docker
 
 **Team:** 1 students
 

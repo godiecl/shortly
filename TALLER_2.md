@@ -2,7 +2,7 @@
 
 **Team:** 2 students
 
-**Duration:** 20 june to 2 july.
+**Duration:** 19 june to 3 july.
 
 **Final deliverable:** Modified codebase.
 
