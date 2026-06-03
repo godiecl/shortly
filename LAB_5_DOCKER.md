@@ -1,6 +1,6 @@
 # LAB 5: Containerization with Docker
 
-**Team:** 2 students
+**Team:** 1 students
 
 **Duration:** 22 june to 3 july.
 

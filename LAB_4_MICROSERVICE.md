@@ -1,6 +1,6 @@
 # Laboratory 4: Microservices Architecture with C4 Model
 
-**Team:** 2 students
+**Team:** 1 students
 
 **Duration:** 12 june to 22 june.
 
