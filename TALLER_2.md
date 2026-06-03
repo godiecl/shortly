@@ -15,6 +15,8 @@
 
 ## Requirements
 
+* Clone the existing Shortly codebase from the provided GitHub repository.
+
 ### A. Must-Have — Core CQRS Implementation
 
 1. **Separate Command and Query models**

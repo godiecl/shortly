@@ -15,6 +15,8 @@
 
 ## Requirements
 
+* Clone the existing Shortly codebase from the provided GitHub repository.
+
 ### Objective
 
 Containerize the Shortly web application using Docker. Write a production-ready `Dockerfile` and a `docker-compose.yml` that orchestrates the application along with its dependencies (database, cache, etc.).

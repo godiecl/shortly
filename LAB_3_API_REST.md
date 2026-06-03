@@ -15,6 +15,8 @@
 
 ## Requirements
 
+
+* Clone the existing Shortly codebase from the provided GitHub repository.
 * Implement a REST API for the Shortly system.
 * The API must expose the functionality of the URL shortener through standard HTTP endpoints (GET, POST, DELETE, etc.) using JSON or XML depending on the request's `Accept` header (content negotiation).
 

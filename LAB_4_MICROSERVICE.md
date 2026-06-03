@@ -15,6 +15,8 @@
 
 ## Requirements
 
+* Clone the existing Shortly codebase from the provided GitHub repository.
+
 ### Objective
 
 Design a microservices-based architecture for the Shortly URL shortener using the **C4 model** (Context, Container, Component, Code). The goal is to decompose the current monolithic system into independent, loosely coupled microservices, each with a single responsibility.

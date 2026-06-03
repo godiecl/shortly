@@ -15,6 +15,8 @@
 
 ## Requirements
 
+* Clone the existing Shortly codebase from the provided GitHub repository.
+
 ### A. Must-Have
 
 1. **Hide time from ULID**
