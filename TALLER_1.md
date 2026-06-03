@@ -1,8 +1,8 @@
-# Taller: HTTP Protocol Improvements on Shortly
+# Taller 1: HTTP Protocol Improvements on Shortly
 
 **Team:** 2 students
 
-**Duration:** ~1 week
+**Duration:** 3 june to 19 june.
 
 **Final deliverable:** Modified codebase + benchmark report in `docs/`
 
