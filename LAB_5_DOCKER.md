@@ -2,7 +2,7 @@
 
 **Team:** 1 students
 
-**Duration:** 22 june to 3 july.
+**Duration:** 22 june to 1 august 2026.
 
 **Final deliverable:** Dockerfile + docker-compose.yml + documentation.
 

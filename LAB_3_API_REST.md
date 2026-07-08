@@ -2,7 +2,7 @@
 
 **Team:** 1 students
 
-**Duration:** 3 to 12 june 2026.
+**Duration:** 3 to 18 july 2026.
 
 **Final deliverable:** Modified codebase.
 

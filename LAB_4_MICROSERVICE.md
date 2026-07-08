@@ -2,7 +2,7 @@
 
 **Team:** 1 students
 
-**Duration:** 12 june to 22 june.
+**Duration:** 12 june to 22 july 2026.
 
 **Final deliverable:** C4 model diagrams + architecture document.
 

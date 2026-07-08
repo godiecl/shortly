@@ -2,7 +2,7 @@
 
 **Team:** 2 students
 
-**Duration:** 3 june to 19 june.
+**Duration:** 3 june to 23 july 2026.
 
 **Final deliverable:** Modified codebase + benchmark report in `docs/`
 
